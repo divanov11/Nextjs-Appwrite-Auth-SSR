@@ -49,7 +49,7 @@ const auth = {
             const { account } = await createSessionClient(
                 auth.sessionCookie.value
             );
-            await account.delete("current");
+            await account.deleteSession("current");
         } catch (error) {}
 
         cookies().delete("session");
